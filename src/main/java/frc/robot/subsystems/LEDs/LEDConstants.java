@@ -24,7 +24,7 @@ public class LEDConstants {
     public static final int[] G = green;
 
 
-    public static final int[][][] shape = {
+    public static final int[][][] shamrock = {
         {n, n, n, n, n, G, G, n, n, G, G, n, n, n, n, n}, // 1
         {n, n, n, n, G, G, G, G, G, G, G, G, n, n, n, n}, // 2
         {n, n, n, n, G, G, G, G, G, G, G, G, n, n, n, n}, // 3

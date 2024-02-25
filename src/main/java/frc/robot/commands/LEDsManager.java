@@ -28,11 +28,8 @@ public class LEDsManager extends Command {
   public void controlLEDS(){
     switch (getState()) {
       case "DISABLED":
-        //leds.setRainbow(leds.getStripsRange());
-        //leds.setColor(leds.getLeftPanelRange(), LED_Constants.green);
-        //leds.setColor(leds.getRightPanelRange(), LED_Constants.gold);
-        //leds.setShape(leds.getLeftPanel(), Shapes.getAShape());
-        leds.togglePanel(leds.getRightPanel(), leds.getLeftPanel(), LEDConstants.shape);
+        leds.setRainbow(leds.getAllLEDS());
+        
         break;
       case "AUTONRED":
         leds.setAllStrips(LEDConstants.red);
@@ -43,10 +40,11 @@ public class LEDsManager extends Command {
         leds.setAllPanelColor(LEDConstants.green);
         break;
       case "TELEOP":
-        leds.setAllColor(LEDConstants.green);
+        leds.togglePanel(leds.getRightPanel(), leds.getLeftPanel(), LEDConstants.shamrock);
+        leds.setColor(leds.getStripsRange(), LEDConstants.green);
         break;
       case "SETGREEN":
-        leds.setAllColor(LEDConstants.pink);
+        leds.setAllColor(LEDConstants.green);
         break;
       case "OFF":
         leds.setAllOff();

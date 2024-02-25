@@ -146,9 +146,9 @@ public class LEDs extends SubsystemBase {
     for (int i = startEnd[0]; i < startEnd[1]; i++){
       final int hue = ((int)(m_rainbowFirstPixelHue) + (i * 180 / m_ledBuffer.getLength())) % 180;
 
-      m_ledBuffer.setHSV(i, hue, 255, 64);
+      m_ledBuffer.setHSV(i, hue, 255, 150);
     }
-    m_rainbowFirstPixelHue += 0.5;
+    m_rainbowFirstPixelHue += 0.75;
 
     m_rainbowFirstPixelHue %= 180;
     m_led.setData(m_ledBuffer);
