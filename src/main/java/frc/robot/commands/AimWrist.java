@@ -40,6 +40,8 @@ public class AimWrist extends Command {
           Units.degreesToRadians(photonVision.getLatestResult().getBestTarget().getPitch())
           );
 
+        double distance = photonVision.getLatestResult().getBestTarget().getArea();
+
         double targetWrist = Math.toDegrees(
           Math.atan((
             VisionConstants.SPEAKER_SCORE_HEIGHT - VisionConstants.WRIST_AXLE_HEIGHT)

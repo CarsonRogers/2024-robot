@@ -8,6 +8,7 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Rotation3d;
 import edu.wpi.first.math.geometry.Transform3d;
 import edu.wpi.first.math.geometry.Translation2d;
+import edu.wpi.first.math.interpolation.InterpolatingDoubleTreeMap;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
@@ -232,6 +233,11 @@ public class Constants {
 
         public static final double MaxRotateSpeed = -0.1;
         public static final double MaxRotateUpSpeed = 0.3;
+
+        public static InterpolatingDoubleTreeMap shooterMap = new InterpolatingDoubleTreeMap();
+        static {
+            shooterMap.put(1.1684, 197.0);
+        }
     }
     
 
